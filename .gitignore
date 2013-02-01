@@ -6,3 +6,4 @@ install/logs/
 *.sublime-*
 workspace/bootstrap
 workspace/uploads/images
+workspace/grunt/node_modules

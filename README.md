@@ -1,4 +1,4 @@
-dtrmn
-=====
+BrianSimcoe.com
+===============
 
-The website of dtr.mn
+The public website code for *briansimcoe.com*.

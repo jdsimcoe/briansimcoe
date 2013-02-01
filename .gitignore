@@ -1,0 +1,8 @@
+.htaccess
+manifest/
+sql/
+install-log.txt
+install/logs/
+*.sublime-*
+workspace/bootstrap
+workspace/uploads/images

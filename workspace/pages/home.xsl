@@ -23,16 +23,16 @@
 
     <div class="row">
       <div class="span12">
-        <h3>Artwork</h3>
-        <xsl:apply-templates select="/data/artwork-2-latest/entry"/>
+        <h3 class="section-header art">Artwork</h3>
       </div>
+      <xsl:apply-templates select="/data/artwork-2-latest/entry"/>
     </div>
 
     <div class="row">
       <div class="span12">
-        <h3>Photography</h3>
-<!--         <xsl:apply-templates select="/data/articles-4-latest/entry"/> -->
+        <h3 class="section-header photo">Photography</h3>
       </div>
+      <xsl:apply-templates select="/data/photo-4-latest/entry"/>
     </div>
 
     <div class="row">

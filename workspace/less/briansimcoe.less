@@ -287,6 +287,15 @@ a {
   -webkit-font-smoothing: antialiased;
 }
 
+.section-header {
+  color: lighten(@color-black, 15%);
+  font-family: @league;
+  font-weight: normal;
+  font-size: 32px;
+  text-transform: uppercase;
+  margin-top: 60px;
+}
+
 // Advanced Styles
 // ===============
 
@@ -1134,7 +1143,7 @@ body > .navbar .brand {
 
 .artwork {
   position: relative;
-  margin: 15px 0;
+  margin: 0 0 15px 0;
 }
 
 
@@ -1250,6 +1259,28 @@ body > .navbar .brand {
         position: relative;
         bottom: -15px;
       }
+    }
+  }
+
+}
+
+.photo-entry {
+  text-align: left;
+  position: relative;
+
+  .metadata {
+    position: absolute;
+    display: block;
+    margin: 0 15px;
+    bottom: -155px;
+    left: 0;
+    right: 0;
+
+    h4 {
+      font-family: @courier;
+      font-weight: normal;
+      font-style: italic;
+      letter-spacing: 0.03em;
     }
   }
 
@@ -1404,7 +1435,7 @@ body > .navbar .brand {
 // ===========
 
 .img-polaroid {
-  padding: 10px 10px 60px 10px;
+  padding: 10px 10px 80px 10px;
 }
 
 .img-artwork {

@@ -2,18 +2,22 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourceartwork_2_latest extends SectionDatasource{
+	Class datasourceartwork_featured extends SectionDatasource{
 
-		public $dsParamROOTELEMENT = 'artwork-2-latest';
+		public $dsParamROOTELEMENT = 'artwork-featured';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
-		public $dsParamLIMIT = '4';
+		public $dsParamLIMIT = '1';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
-		public $dsParamSORT = 'system:id';
+		public $dsParamSORT = 'date';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 		
 
+		public $dsParamFILTERS = array(
+				'81' => 'yes',
+				'79' => 'no',
+		);
 		
 
 		public $dsParamINCLUDEDELEMENTS = array(
@@ -34,13 +38,13 @@
 
 		public function about(){
 			return array(
-				'name' => 'Artwork: 2 Latest',
+				'name' => 'Artwork: Featured',
 				'author' => array(
 					'name' => 'Jonathan Simcoe',
 					'website' => 'http://briansimcoe',
 					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.3.1',
-				'release-date' => '2013-02-01T20:42:52+00:00'
+				'release-date' => '2013-02-04T02:48:43+00:00'
 			);
 		}
 

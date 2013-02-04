@@ -197,13 +197,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brand pull-left" href="/">Brian Simcoe<span>&#160;&#160;Creative</span></a>
+      <a class="brand pull-left" href="/">Brian Simcoe<span>&#160;&#160;Fine Art</span></a>
       <div class="nav-collapse collapse">
         <ul class="nav pull-right">
           <xsl:apply-templates select="page"/>
           <xsl:if test="$cookie-username">
             <li class="">
-              <a href="#" data-toggle="dropdown"><i class="glyphicon-wrench"></i></a>
+              <a href="#" data-toggle="dropdown" class="dropdown"><i class="glyphicon-wrench"></i></a>
               <ul class="dropdown-menu">
                 <li><a href="/symphony/" target="_blank">Symphony</a></li>
                 <li><a href="?debug" target="_blank">Debug</a></li>

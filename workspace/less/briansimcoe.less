@@ -62,7 +62,7 @@
 // ------------------
 
 // Large desktops
-@import "../bootstrap/less/responsive-1200px-min.less";
+// @import "../bootstrap/less/responsive-1200px-min.less";
 
 // Tablets to regular desktops
 @import "../bootstrap/less/responsive-768px-979px.less";
@@ -291,9 +291,25 @@ a {
   color: lighten(@color-black, 15%);
   font-family: @league;
   font-weight: normal;
-  font-size: 32px;
+  font-size: 48px;
   text-transform: uppercase;
   margin-top: 60px;
+  margin-bottom: 30px;
+  text-align: center;
+
+  &::before,
+  &::after {
+    font-size: 12px;
+    content: "• • • • • • • • • • ";
+    position: relative;
+    top: -10px;
+    color: darken(@color-white, 15%);
+    letter-spacing: 4px;
+  }
+
+  &::after {
+    content: " • • • • • • • • • •";
+  }
 }
 
 // Advanced Styles
@@ -358,9 +374,8 @@ body > .navbar .brand {
   .nav {
 
     li {
-      font-family: @courier;
+      font-family: @league;
       text-transform: uppercase;
-      font-size: 20px;
 
       &.active {
 
@@ -388,6 +403,13 @@ body > .navbar .brand {
         color: #fff;
         border-top: 4px solid darken(@color-accent, 10%);
         border-left: 1px solid darken(@color-accent, 10%);
+        font-size: 28px;
+        font-weight: normal;
+        letter-spacing: 0.04em;
+
+        &.dropdown {
+          font-size: 18px;
+        }
 
         .badge {
           background: @color-white;
@@ -1141,6 +1163,13 @@ body > .navbar .brand {
 // BOOKS
 // =====
 
+.span12 {
+
+  .artwork {
+    margin-bottom: 30px;
+  }
+}
+
 .artwork {
   position: relative;
   margin: 0 0 15px 0;
@@ -1177,8 +1206,8 @@ body > .navbar .brand {
     display: block;
     margin: 0 15px;
     bottom: 0;
-    left: 0;
-    right: 0;
+    left: -5px;
+    right: -5px;
     .border-radius(0 0 4px 4px);
     .box-shadow(0 -1px 2px rgba(0,0,0,0.1));
 
@@ -1222,6 +1251,33 @@ body > .navbar .brand {
     }
 
 
+  }
+
+  &.featured {
+
+    .metadata {
+      left: -15px;
+      right: -15px;
+    }
+
+    .featured {
+      color: #fff;
+      font-family: @sans;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 16px;
+      background: lighten(@color-accent, 20%);
+      display: inline;
+      padding: 6px 10px;
+      position: absolute;
+      right: 0;
+      bottom: auto;
+      top: 0;
+      left: auto;
+      text-align: center;
+      text-shadow: 0 -1px 0 lighten(@color-accent, 5%);
+      .border-radius(0 4px 0 4px);
+    }
   }
 
 
@@ -1272,14 +1328,13 @@ body > .navbar .brand {
     position: absolute;
     display: block;
     margin: 0 15px;
-    bottom: -155px;
+    bottom: -130px;
     left: 0;
     right: 0;
 
     h4 {
-      font-family: @courier;
-      font-weight: normal;
-      font-style: italic;
+      font-family: @sans;
+      font-weight: 300;
       letter-spacing: 0.03em;
     }
   }
@@ -1441,6 +1496,12 @@ body > .navbar .brand {
 .img-artwork {
   .border-radius(4px);
   .box-shadow(0 0 4px darken(@color-white, 10%));
+}
+
+.img-pola {
+  border: 10px solid #fff;
+  border-bottom-width: 60px;
+  .box-shadow(0 0 8px #ccc);
 }
 
 // RESPONSIVE IMAGES

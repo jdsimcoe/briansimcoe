@@ -9,14 +9,6 @@
 
 <xsl:template match="data">
 
-<!--   <div class="container">
-    <div class="marketing main">
-
-      <h2>What is Determine?</h2>
-      <p class="marketing-byline">Like Paul declared above, our goal is to make the Gospel of Jesus Christ known, treasured and embraced in every facet of life. We are striving to do this in the following ways:</p>
-
-    </div>
-  </div> -->
 
   <div class="main container">
 
@@ -25,7 +17,14 @@
       <div class="span12">
         <h3 class="section-header art">Artwork</h3>
       </div>
-      <xsl:apply-templates select="/data/artwork-2-latest/entry"/>
+    </div>
+
+    <div class="row">
+      <xsl:apply-templates select="/data/artwork-featured/entry"/>
+    </div>
+
+    <div class="row">
+      <xsl:apply-templates select="/data/artwork-3-latest/entry"/>
     </div>
 
     <div class="row">

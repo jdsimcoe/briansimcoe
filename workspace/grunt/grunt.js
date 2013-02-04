@@ -24,7 +24,7 @@ module.exports = function (grunt) {
         src: [
         '../less/briansimcoe.less'
         ],
-        dest: '../css/briansimcoe.1.0.0.css',
+        dest: '../css/briansimcoe.1.0.1.css',
         options: {
             compile: true,
             compress: true
@@ -51,7 +51,7 @@ module.exports = function (grunt) {
           '../js/responsimage.js',
           '../js/reftagger.js',
         ],
-        dest: '../js/briansimcoe.1.0.0.js',
+        dest: '../js/briansimcoe.1.0.1.js',
         separator: ';'
       }
     },

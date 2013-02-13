@@ -109,8 +109,10 @@
         </h4>
         <p>
           <xsl:value-of select="media"/>
-          <xsl:text> on </xsl:text>
-          <xsl:value-of select="medium"/>
+          <xsl:if test="medium != ''">
+            <xsl:text> on </xsl:text>
+            <xsl:value-of select="medium"/>
+          </xsl:if>
           <br/>
           <span class="dimensions">
             <xsl:text>Dimensions:</xsl:text>
@@ -155,8 +157,10 @@
           </h4>
           <p>
             <xsl:value-of select="media"/>
-            <xsl:text> on </xsl:text>
-            <xsl:value-of select="medium"/>
+            <xsl:if test="medium != ''">
+              <xsl:text> on </xsl:text>
+              <xsl:value-of select="medium"/>
+            </xsl:if>
             <br/>
             <span class="dimensions">
               <xsl:text>Dimensions:</xsl:text>

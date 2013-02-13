@@ -114,6 +114,9 @@
           <xsl:text>jumbotron masthead</xsl:text>
         </xsl:attribute>
         <div class="container">
+          <div>
+            <h2 class="brand">Brian Simcoe<span>&#160;&#160;Fine Art</span></h2>
+          </div>
           <p class="vision">
             <em>The artistic <span class="amp">&amp;</span> creative portfolio of Brian Simcoe</em>
           </p>
@@ -197,7 +200,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brand pull-left" href="/">Brian Simcoe<span>&#160;&#160;Fine Art</span></a>
+      <a class="brand pull-left" href="/"><strong>b</strong> Brian Simcoe<span class="subtitle">&#160;&#160;Fine Art</span></a>
       <div class="nav-collapse collapse">
         <ul class="nav pull-right">
           <xsl:apply-templates select="page"/>

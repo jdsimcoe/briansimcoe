@@ -115,6 +115,7 @@
 @serif: Georgia, Times, serif;
 @courier: 'Courier Prime', 'Courier New', Courier, monospace;
 @league: 'League Gothic', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+@league-script: 'League Script', cursive;
 
 // RESPONSIMAGE
 // ============
@@ -327,16 +328,36 @@ body > .navbar .brand {
   color: darken(@color-accent, 30%);
   text-shadow: 0 1px 0 lighten(@color-accent, 10%);
   text-transform: uppercase;
+  visibility: hidden;
+
+  strong {
+    background: darken(@color-accent, 15%);
+    color: lighten(@color-accent, 10%);
+    font-family: @league-script;
+    margin-right: 15px;
+    padding: 21px 20px 15px 20px;
+    text-transform: lowercase;
+    text-shadow: none;
+    visibility: visible;
+
+  }
 
   span {
     color: darken(@color-accent, 10%);
   }
 
   &:hover {
-    text-shadow: 0 -1px 0 darken(@color-accent, 25%);
+    color: darken(@color-accent, 30%);
+    text-shadow: 0 1px 0 lighten(@color-accent, 10%);
+    visibility: visible;
+
+    strong {
+      .box-shadow(inset 0 0 12px darken(@color-accent, 20%));
+      color: lighten(@color-accent, 30%);
+    }
 
     span {
-      color: lighten(@color-accent, 10%);
+      color: darken(@color-accent, 10%);
     }
   }
 }
@@ -462,9 +483,16 @@ body > .navbar .brand {
     .box-shadow(none);
 
     h2 {
-      color: darken(@color-accent, 10%);
-      text-shadow: 0 -1px 0 darken(@color-accent, 15%), 0 1px 0 lighten(@color-accent, 4%);
-      font-size: 48px;
+      font-family: @league;
+      font-size: 55px;
+      color: darken(@color-accent, 30%);
+      text-shadow: 0 1px 0 @color-white;
+      text-transform: uppercase;
+      padding-top: 55px;
+
+      span {
+        color: lighten(@color-accent, 10%);
+      }
     }
 
     p {
@@ -476,7 +504,7 @@ body > .navbar .brand {
         font-weight: normal;
         font-size: 28px;
         text-align: center;
-        padding: 55px 100px 40px 100px;
+        padding: 10px 100px 40px 100px;
         color: lighten(@color-black, 60%);
         text-shadow: 0 1px #fff, 0 -1px 0 lighten(@color-black, 50%);
 

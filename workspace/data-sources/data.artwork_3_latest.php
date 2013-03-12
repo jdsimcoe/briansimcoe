@@ -26,8 +26,7 @@
 				'image: caption',
 				'media: title',
 				'medium: title',
-				'dimensions',
-				'price'
+				'dimensions'
 		);
 		
 
@@ -44,7 +43,7 @@
 					'website' => 'http://briansimcoe',
 					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.3.1',
-				'release-date' => '2013-02-04T02:48:33+00:00'
+				'release-date' => '2013-03-12T20:04:40+00:00'
 			);
 		}
 

@@ -2,27 +2,35 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourcephoto_4_latest extends SectionDatasource{
+	Class datasourceartwork_all extends SectionDatasource{
 
-		public $dsParamROOTELEMENT = 'photo-4-latest';
+		public $dsParamROOTELEMENT = 'artwork-all';
 		public $dsParamORDER = 'desc';
-		public $dsParamPAGINATERESULTS = 'yes';
-		public $dsParamLIMIT = '4';
-		public $dsParamSTARTPAGE = '1';
+		public $dsParamPAGINATERESULTS = 'no';
+		public $dsParamLIMIT = '24';
+		public $dsParamSTARTPAGE = '{$title}';
 		public $dsParamREDIRECTONEMPTY = 'no';
 		public $dsParamSORT = 'date';
-		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
+		public $dsParamHTMLENCODE = 'yes';
+		public $dsParamASSOCIATEDENTRYCOUNTS = 'yes';
 		
 
 		public $dsParamFILTERS = array(
-				'80' => 'no',
+				'79' => 'no',
 		);
 		
 
 		public $dsParamINCLUDEDELEMENTS = array(
+				'system:pagination',
 				'title',
+				'date',
 				'image: image',
-				'image: caption'
+				'image: caption',
+				'media: title',
+				'medium: title',
+				'dimensions',
+				'price',
+				'featured'
 		);
 		
 
@@ -33,18 +41,18 @@
 
 		public function about(){
 			return array(
-				'name' => 'Photo: 4 Latest',
+				'name' => 'Artwork: All',
 				'author' => array(
 					'name' => 'Jonathan Simcoe',
 					'website' => 'http://briansimcoe',
 					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.3.1',
-				'release-date' => '2013-02-04T02:48:54+00:00'
+				'release-date' => '2013-03-12T19:59:52+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '15';
+			return '13';
 		}
 
 		public function allowEditorToParse(){

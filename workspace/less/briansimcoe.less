@@ -289,10 +289,10 @@ a {
 }
 
 .section-header {
-  color: lighten(@color-black, 15%);
+  color: lighten(@color-black, 50%);
   font-family: @league;
   font-weight: normal;
-  font-size: 48px;
+  font-size: 40px;
   text-transform: uppercase;
   margin-top: 60px;
   margin-bottom: 30px;
@@ -473,10 +473,11 @@ body > .navbar .brand {
 }
 
 .jumbotron {
-  .border-radius(0);
-  margin-top: 16px;
   background: url('../img/texture/retina_dust.png') repeat;
   border-bottom: 1px solid lighten(@color-black, 70%);
+  .border-radius(0);
+  margin-bottom: 0;
+  margin-top: 16px;
 
   &.masthead {
     padding: 38px 0 40px 0;
@@ -583,7 +584,7 @@ body > .navbar .brand {
     margin-top: 0;
 
     a {
-      color: darken(@color-white, 30%);
+      color: darken(@color-white, 45%);
       font-size: 78px;
       font-family: @league;
       letter-spacing: 0.02em;
@@ -607,6 +608,7 @@ body > .navbar .brand {
   .lead {
     color: darken(@color-white, 25%);
     font-family: @serif;
+    font-style: italic;
     margin-bottom: 0;
     font-weight: 300;
     font-size: 24px;
@@ -1192,8 +1194,8 @@ body > .navbar .brand {
 
 }
 
-// BOOKS
-// =====
+// ARTWORK
+// =======
 
 .span12 {
 
@@ -1309,6 +1311,10 @@ body > .navbar .brand {
       text-align: center;
       text-shadow: 0 -1px 0 lighten(@color-accent, 5%);
       .border-radius(0 4px 0 4px);
+
+      &.small {
+        right: 10px;
+      }
     }
   }
 
@@ -1379,6 +1385,66 @@ body > .navbar .brand {
 
 .wrapper-about {
   margin-top: 30px;
+}
+
+// PAGES
+// =====
+
+.page-artwork {
+
+  .wrapper {
+    margin-bottom: 60px;
+  }
+
+  .content {
+
+    h4 {
+      color: lighten(@color-black, 15%);
+      font-family: @league;
+      text-transform: uppercase;
+      font-size: 32px;
+      font-weight: normal;
+      letter-spacing: 0.04em;
+      margin: 30px 0 15px;
+    }
+
+    p {
+      color: lighten(@color-black, 20%);
+      font-family: @serif;
+      font-size: 16px;
+      line-height: 1.8;
+
+      &.media,
+      &.dimensions {
+        font-size: 20px;
+        font-style: italic;
+      }
+      &.price {
+
+        .badge {
+
+          &.number {
+            font-size: 20px;
+            padding: 10px;
+          }
+
+        }
+
+      }
+    }
+
+  }
+
+  .other {
+    color: darken(@color-white, 15%);
+    font-family: @league;
+    font-size: 26px;
+    font-weight: normal;
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
 }
 
 
@@ -1670,6 +1736,7 @@ body > .navbar .brand {
   body > .navbar .brand {
     position: relative;
     top: 0px;
+    font-size: 28px;
   }
 
   .navbar {

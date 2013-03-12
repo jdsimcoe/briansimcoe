@@ -75,7 +75,7 @@
     </script>
   </head>
 
-  <body>
+  <body class="page-{$root-page}">
     <xsl:apply-templates select="data/navigation"/>
     <div>
       <xsl:if test="$page-title != 'Home'">

@@ -7,18 +7,17 @@
 		public $dsParamROOTELEMENT = 'writing-latest';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
-		public $dsParamLIMIT = '4';
+		public $dsParamLIMIT = '1';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
 		public $dsParamSORT = 'date';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
-		public $dsParamCACHE = '0';
-
+		
 
 		public $dsParamFILTERS = array(
 				'21' => 'no',
 		);
-
+		
 
 		public $dsParamINCLUDEDELEMENTS = array(
 				'title',
@@ -28,7 +27,7 @@
 				'verses: content',
 				'verses: version: abbreviation'
 		);
-
+		
 
 		public function __construct($env=NULL, $process_params=true){
 			parent::__construct($env, $process_params);
@@ -40,10 +39,10 @@
 				'name' => 'Writing: Latest',
 				'author' => array(
 					'name' => 'Jonathan Simcoe',
-					'website' => 'http://dtrmn',
+					'website' => 'http://briansimcoe',
 					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.3.1',
-				'release-date' => '2012-12-29T19:08:12+00:00'
+				'release-date' => '2013-03-13T21:11:30+00:00'
 			);
 		}
 

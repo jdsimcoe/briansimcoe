@@ -6,13 +6,12 @@
 
 		public $dsParamROOTELEMENT = 'artwork-all';
 		public $dsParamORDER = 'desc';
-		public $dsParamPAGINATERESULTS = 'no';
+		public $dsParamPAGINATERESULTS = 'yes';
 		public $dsParamLIMIT = '24';
 		public $dsParamSTARTPAGE = '{$title}';
 		public $dsParamREDIRECTONEMPTY = 'no';
 		public $dsParamSORT = 'date';
-		public $dsParamHTMLENCODE = 'yes';
-		public $dsParamASSOCIATEDENTRYCOUNTS = 'yes';
+		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 		
 
 		public $dsParamFILTERS = array(
@@ -47,7 +46,7 @@
 					'website' => 'http://briansimcoe',
 					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.3.1',
-				'release-date' => '2013-03-12T19:59:52+00:00'
+				'release-date' => '2013-03-13T17:19:19+00:00'
 			);
 		}
 

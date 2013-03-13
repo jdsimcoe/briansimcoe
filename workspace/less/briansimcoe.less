@@ -86,9 +86,6 @@
 // =========
 @import "reftagger.less";
 
-// Logo
-@import "logo.less";
-
 
 // Color Variables
 // ===============
@@ -125,18 +122,6 @@
   [data-responsimage] {
     font-family: 'pixel-ratio-2';
   }
-}
-
-// Logo
-// ====
-
-.logo {
-  font-family: Determine;
-  text-transform: lowercase;
-  font-weight: normal;
-  position: relative;
-  top: 0;
-  margin-right: -3px;
 }
 
 // Bootstrap Overrides
@@ -199,21 +184,6 @@
   text-shadow: 0 1px 0 rgba(255,255,255,0.15);
 }
 
-.logo {
-
-  &.icon-large {
-    display: block;
-    text-align: center;
-    font-size: 75px;
-    padding: 25px 0;
-
-    &.huge {
-      font-size: 111px;
-      padding: 42px 0;
-    }
-  }
-
-}
 
 // General Tweaks
 
@@ -317,29 +287,29 @@ a {
 // ===============
 
 body > .navbar .brand {
-  position: relative;
-  top: 15px;
-  left: 0;
   float: left;
-  margin-left: 0;
-  font-weight: 300;
   font-family: @league;
   font-size: 40px;
-  color: darken(@color-accent, 30%);
+  font-weight: 300;
+  left: 0;
+  margin-left: 5px;
+  position: relative;
   text-shadow: 0 1px 0 lighten(@color-accent, 10%);
   text-transform: uppercase;
+  top: 15px;
   visibility: hidden;
 
   strong {
     background: darken(@color-accent, 15%);
-    color: lighten(@color-accent, 10%);
+    .border-radius(0 0 5px 5px);
+    .box-shadow(0 1px 8px rgba(255,255,255,0.25));
+    color: lighten(@color-accent, 30%);
     font-family: @league-script;
     margin-right: 15px;
-    padding: 21px 20px 15px 20px;
+    padding: 21px 25px 15px 25px;
     text-transform: lowercase;
     text-shadow: none;
     visibility: visible;
-
   }
 
   span {
@@ -353,7 +323,7 @@ body > .navbar .brand {
 
     strong {
       .box-shadow(inset 0 0 12px darken(@color-accent, 20%));
-      color: lighten(@color-accent, 30%);
+      color: @color-white;
     }
 
     span {
@@ -395,7 +365,6 @@ body > .navbar .brand {
   .nav {
 
     li {
-      font-family: @league;
       text-transform: uppercase;
 
       &.active {
@@ -419,13 +388,13 @@ body > .navbar .brand {
 
       a {
         height: 20px;
-        padding-top: 25px;
-        padding-bottom: 25px;
+        padding-top: 20px;
+        padding-bottom: 20px;
         color: #fff;
         border-top: 4px solid darken(@color-accent, 10%);
         border-left: 1px solid darken(@color-accent, 10%);
-        font-size: 28px;
-        font-weight: normal;
+        font-size: 16px;
+        font-weight: 300;
         letter-spacing: 0.04em;
 
         &.dropdown {
@@ -591,11 +560,6 @@ body > .navbar .brand {
       text-align: left;
       text-shadow: 0 1px 0 @color-white, 0 -1px 0 darken(@color-white, 35%);
       text-transform: uppercase;
-
-      .logo {
-        margin-right: -30px;
-        display: inline-block;
-      }
 
 
       &:hover {
@@ -972,11 +936,9 @@ body > .navbar .brand {
 }
 
 .wrapper-doctrine,
-.wrapper-blog,
 .wrapper-quotes,
 .wrapper-studies,
 .wrapper-books  {
-  padding: 0 0 100px 0;
 
   .entry {
 
@@ -1054,16 +1016,17 @@ body > .navbar .brand {
 // ====
 
 .wrapper-blog {
-  margin-top: 30px;
-  .box-shadow(0 -2px 8px rgba(0,0,0,0.1));
+  margin-top: 60px;
+
 
   &.home {
+    margin-top: 30px;
     position: relative;
     bottom: -61px;
   }
 
   .entry {
-
+    .box-shadow(0 -2px 8px rgba(0,0,0,0.1));
     * {
       font-family: @courier;
     }
@@ -1097,8 +1060,33 @@ body > .navbar .brand {
       text-align: left;
     }
 
+    h2 {
+      margin-left: 10px;
+    }
+
     img {
       margin: 20px 0;
+    }
+
+    &.single {
+
+      h1 {
+        font-size: 32px;
+        margin: 0;
+        text-align: center;
+      }
+
+      .inner {
+        padding: 0 30px;
+      }
+
+      .content {
+
+        p {
+          padding: 0;
+          font-size: 16px;
+        }
+      }
     }
 
     &.list {
@@ -1122,12 +1110,25 @@ body > .navbar .brand {
         margin: 15px;
       }
 
+      h1 {
+        padding-left: 5px;
+      }
+
       .content {
+        color: lighten(@color-black, 20%);
         font-size: 18px;
         line-height: 1.8;
-        padding: 10px 15px;
+        padding: 10px 0;
         border-top: none;
         min-height: 180px;
+
+        h2 {
+          margin-left: 15px;
+        }
+
+        p {
+          font-family: @serif;
+        }
       }
 
       img {
@@ -1362,18 +1363,36 @@ body > .navbar .brand {
   text-align: left;
   position: relative;
 
+  &:hover {
+
+    .metadata {
+      visibility: visible;
+    }
+  }
+
   .metadata {
+    background: #fff;
     position: absolute;
     display: block;
-    margin: 0 15px;
-    bottom: -120px;
+    margin: 0 1px;
+    padding: 5px 10px;
+    bottom: -95px;
     left: 0;
     right: 0;
+    visibility: hidden;
 
     h4 {
       font-family: @sans;
+      font-size: 16px;
       font-weight: 300;
       letter-spacing: 0.03em;
+      margin: 10px 0 0 0;
+    }
+    .description {
+      color: lighten(@color-black, 40%);
+      font-family: @serif;
+      font-size: 14px;
+      margin: 0 0 5px 0;
     }
   }
 
@@ -1390,7 +1409,8 @@ body > .navbar .brand {
 // PAGES
 // =====
 
-.page-artwork {
+.page-artwork,
+.page-photo {
 
   .wrapper {
     margin-bottom: 60px;
@@ -1447,6 +1467,18 @@ body > .navbar .brand {
 
 }
 
+.page-photo {
+
+  .caption {
+    color: lighten(@color-black, 40%);
+    font-family: @serif;
+    font-weight: normal;
+    margin: 15px 0;
+    text-align: center;
+  }
+
+}
+
 
 // FOOTER
 // ======
@@ -1496,14 +1528,6 @@ body > .navbar .brand {
       color: darken(@color-white, 25%);
       margin-bottom: 15px;
       text-shadow: 0 1px 0 @color-white;
-    }
-
-    .logo {
-
-      &.icon-black {
-        color: #202020;
-        text-shadow: 0 1px 0 lighten(@color-black, 7%), 0 -1px 0 darken(@color-black, 10%);
-      }
     }
 
     a {
@@ -1587,19 +1611,9 @@ body > .navbar .brand {
 // IMAGE TILES
 // ===========
 
-.img-polaroid {
-  padding: 10px 10px 80px 10px;
-}
-
 .img-artwork {
   .border-radius(4px);
   .box-shadow(0 0 4px darken(@color-white, 10%));
-}
-
-.img-pola {
-  border: 10px solid #fff;
-  border-bottom-width: 60px;
-  .box-shadow(0 0 8px #ccc);
 }
 
 // RESPONSIVE IMAGES

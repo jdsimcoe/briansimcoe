@@ -10,50 +10,48 @@
   indent="yes" />
 
 <xsl:include href="../utilities/master.xsl"/>
+<xsl:include href="../utilities/globals.xsl"/>
 
+<xsl:variable name="title">
+  <xsl:text>Error</xsl:text>
+</xsl:variable>
 
 <xsl:template match="data">
-	<div class="container">
+
+  <div class="main container">
+
     <div class="marketing">
-      <i class="glyphicon-th-list icon-large"></i>
-      <h2>Browse Our Catalog</h2>
-      <p class="marketing-byline">We have a growing catalog of Gospel-centered materials. Below is an introduction to what we offer.</p>
+      <h2>We're sorry you didn't find what you were looking for. Use this as a chance to browse around!</h2>
     </div>
-  </div>
-  <div class="stripe first">
-    <div class="container">
-      <h3>Recent Bible Doctrines</h3>
-      <br />
-      <div class="row">
-<!--         <xsl:apply-templates select="/data/doctrines-3-latest/entry"/> -->
-        <div class="span4 doctrine">
-          <a href="">
-            <h3>Coming Soon...</h3>
-            <div class="summary"> </div>
-          </a>
-        </div>
-      </div>
 
-    </div>
-  </div>
 
-  <div class="stripe second">
-    <div class="container">
-      <h3>From the Blog</h3>
-      <div class="row">
-<!--         <xsl:apply-templates select="/data/articles-4-latest/entry"/> -->
+    <hr class="soften"/>
+
+    <div class="row">
+      <div class="span12">
+        <h3 class="section-header art">Artwork</h3>
       </div>
     </div>
-  </div>
 
-  <div class="stripe third">
-    <div class="container">
-      <h3>Latest Quotes</h3>
-      <div class="row">
-<!--         <xsl:apply-templates select="/data/quotes-4-latest/entry"/> -->
+    <div class="row">
+      <xsl:apply-templates select="/data/artwork-3-latest/entry"/>
+    </div>
+
+    <div class="row">
+      <div class="span12">
+        <h3 class="section-header photo">Photography</h3>
+      </div>
+      <xsl:apply-templates select="/data/photo-4-latest/entry"/>
+    </div>
+
+    <div class="row">
+      <div class="span12">
+        <xsl:apply-templates select="/data/writing-latest/entry"/>
       </div>
     </div>
+
   </div>
+
 </xsl:template>
 
 

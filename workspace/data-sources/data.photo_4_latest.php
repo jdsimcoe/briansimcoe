@@ -39,7 +39,7 @@
 					'website' => 'http://briansimcoe',
 					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.3.1',
-				'release-date' => '2013-02-04T02:48:54+00:00'
+				'release-date' => '2013-03-13T19:30:21+00:00'
 			);
 		}
 

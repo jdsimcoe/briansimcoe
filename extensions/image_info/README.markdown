@@ -24,7 +24,7 @@ This extension provides a sort of webservice that returns XML you can use as a d
 
 The URL to use is the following: `{$root}/extensions/image_info/service.php`
 
-Image Information accepts 5 parameters:
+I mage Information accepts 5 parameters:
 
 - `section`*
 An handle or a section id

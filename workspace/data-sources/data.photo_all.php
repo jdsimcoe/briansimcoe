@@ -2,31 +2,30 @@
 
 	require_once(TOOLKIT . '/class.datasource.php');
 
-	Class datasourceartwork_featured extends SectionDatasource{
+	Class datasourcephoto_all extends SectionDatasource{
 
-		public $dsParamROOTELEMENT = 'artwork-featured';
+		public $dsParamROOTELEMENT = 'photo-all';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
-		public $dsParamLIMIT = '1';
-		public $dsParamSTARTPAGE = '1';
+		public $dsParamLIMIT = '32';
+		public $dsParamSTARTPAGE = '{$title}';
 		public $dsParamREDIRECTONEMPTY = 'no';
 		public $dsParamSORT = 'date';
 		public $dsParamASSOCIATEDENTRYCOUNTS = 'no';
 		
 
 		public $dsParamFILTERS = array(
-				'81' => 'yes',
-				'79' => 'no',
+				'80' => 'no',
 		);
 		
 
 		public $dsParamINCLUDEDELEMENTS = array(
+				'system:pagination',
 				'title',
+				'date',
 				'image: image',
 				'image: caption',
-				'media: title',
-				'medium: title',
-				'dimensions'
+				'featured'
 		);
 		
 
@@ -37,18 +36,18 @@
 
 		public function about(){
 			return array(
-				'name' => 'Artwork: Featured',
+				'name' => 'Photo: All',
 				'author' => array(
 					'name' => 'Jonathan Simcoe',
 					'website' => 'http://briansimcoe',
 					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.3.1',
-				'release-date' => '2013-03-12T20:04:52+00:00'
+				'release-date' => '2013-03-13T19:39:55+00:00'
 			);
 		}
 
 		public function getSource(){
-			return '13';
+			return '15';
 		}
 
 		public function allowEditorToParse(){

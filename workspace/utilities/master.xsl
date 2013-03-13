@@ -200,7 +200,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brand pull-left" href="/"><strong>b</strong> Brian Simcoe<span class="subtitle">&#160;&#160;Fine Art</span></a>
+      <a class="brand pull-left" href="/"><strong>b</strong></a>
       <div class="nav-collapse collapse">
         <ul class="nav pull-right">
           <xsl:apply-templates select="page"/>

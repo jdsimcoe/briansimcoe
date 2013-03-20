@@ -133,7 +133,7 @@
           <p class="dimensions">
             <xsl:value-of select="dimensions"/>
           </p>
-          <xsl:if test="price != ''">
+<!--           <xsl:if test="price != ''">
             <h4>Price: </h4>
             <p class="price">
               <span class="badge number">
@@ -143,7 +143,7 @@
                 <sup>00</sup>
               </span>
             </p>
-          </xsl:if>
+          </xsl:if> -->
         </div>
       </div>
     </div>

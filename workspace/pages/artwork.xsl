@@ -45,7 +45,7 @@
 
 
 <xsl:template match="/data/artwork-all/entry">
-   <div class="span4 artwork">
+   <div class="span3 artwork">
     <a href="{$root}/artwork/{title/@handle}">
       <xsl:attribute name="class">
         <xsl:choose>
@@ -86,7 +86,7 @@
       <xsl:if test="featured = 'Yes'">
         <div class="featured small">Featured</div>
       </xsl:if>
-      <img class="img-artwork" src="/workspace/img/spacer.gif" alt="{image/item/image/caption}" style="width:100%; height:200px;">
+      <img class="img-artwork" src="/workspace/img/spacer.gif" alt="{image/item/image/caption}" style="width:100%; height:160px;">
         <xsl:attribute name="data-responsimage">
           <xsl:value-of select="image/item/image/filename" />
         </xsl:attribute>

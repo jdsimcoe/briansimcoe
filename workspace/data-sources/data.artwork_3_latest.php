@@ -7,7 +7,7 @@
 		public $dsParamROOTELEMENT = 'artwork-3-latest';
 		public $dsParamORDER = 'desc';
 		public $dsParamPAGINATERESULTS = 'yes';
-		public $dsParamLIMIT = '3';
+		public $dsParamLIMIT = '4';
 		public $dsParamSTARTPAGE = '1';
 		public $dsParamREDIRECTONEMPTY = 'no';
 		public $dsParamSORT = 'date';
@@ -43,7 +43,7 @@
 					'website' => 'http://briansimcoe',
 					'email' => 'jdsimcoe@gmail.com'),
 				'version' => 'Symphony 2.3.1',
-				'release-date' => '2013-03-12T20:04:40+00:00'
+				'release-date' => '2013-03-20T05:43:54+00:00'
 			);
 		}
 

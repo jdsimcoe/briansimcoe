@@ -24,7 +24,7 @@
     </div>
 
     <div class="row">
-      <xsl:apply-templates select="/data/artwork-3-latest/entry"/>
+      <xsl:apply-templates select="/data/artwork-3-latest/entry[position() &lt; 4]"/>
     </div>
 
     <div class="row">

@@ -148,11 +148,11 @@
       </div>
     </div>
   </div>
-  <hr/>
+<!--   <hr/>
   <h5 class="other">Latest Artwork</h5>
   <div class="row">
     <xsl:apply-templates select="//data/artwork-all/entry[position() &lt; 5 and @id != //data/artwork-single/entry/@id]"/>
-  </div>
+  </div> -->
 </xsl:template>
 
 

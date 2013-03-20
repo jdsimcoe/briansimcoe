@@ -126,11 +126,11 @@
 
     </div>
   </div>
-  <hr/>
+<!--   <hr/>
   <h5 class="other">Latest Photography</h5>
   <div class="row">
     <xsl:apply-templates select="/data/photo-all/entry[position() &lt; 6 and @id != //data/photo-single/entry/@id]"/>
-  </div>
+  </div> -->
 </xsl:template>
 
 </xsl:stylesheet>

@@ -105,7 +105,7 @@
     </h3>
     <div class="row">
       <div class="span12">
-        <img class="img-artwork" src="/workspace/img/spacer.gif" alt="{image/item/image/caption}" style="width:100%; height:600px;">
+        <img class="img-artwork" src="/workspace/img/spacer.gif" alt="{image/item/image/caption}" style="width:100%; height:100%;">
           <xsl:attribute name="data-responsimage">
             <xsl:value-of select="image/item/image/filename" />
           </xsl:attribute>
@@ -121,23 +121,21 @@
       </div>
       <div class="span3">
         <div class="content">
-          <h4 class="top">Media</h4>
-          <p class="media">
+          <h4 class="top"><xsl:value-of select="title"/></h4>
+          <p>
             <xsl:value-of select="media"/>
             <xsl:if test="medium != ''">
               <xsl:text> on </xsl:text>
               <xsl:value-of select="medium"/>
             </xsl:if>
           </p>
-          <h4>Dimensions</h4>
-          <p class="dimensions">
+          <p>
             <xsl:value-of select="dimensions"/>
           </p>
           <xsl:if test="price != ''">
-            <h4>Price: </h4>
             <p class="price">
               <span class="badge number">
-                <xsl:text>$</xsl:text>
+                <xsl:text>USD $</xsl:text>
                 <xsl:value-of select="price"/>
                 <xsl:text>.</xsl:text>
                 <sup>00</sup>
@@ -148,11 +146,6 @@
       </div>
     </div>
   </div>
-<!--   <hr/>
-  <h5 class="other">Latest Artwork</h5>
-  <div class="row">
-    <xsl:apply-templates select="//data/artwork-all/entry[position() &lt; 5 and @id != //data/artwork-single/entry/@id]"/>
-  </div> -->
 </xsl:template>
 
 

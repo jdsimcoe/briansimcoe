@@ -301,7 +301,7 @@ body > .navbar .brand {
 
   strong {
     background: darken(@color-accent, 15%);
-    border-bottom: 5px solid darken(@color-accent, 20%);
+    border-bottom: 5px solid darken(@color-accent, 25%);
     color: lighten(@color-accent, 30%);
     font-family: @league-script;
     margin-right: 15px;
@@ -1024,6 +1024,27 @@ body > .navbar .brand {
     margin-top: 30px;
     position: relative;
     bottom: -61px;
+
+    .entry {
+
+      .inner {
+        padding: 5px 30px;
+      }
+
+      h1 {
+        margin: 20px 0 10px 10px;
+      }
+
+      &.list {
+        .content {
+          padding: 0;
+        }
+      }
+
+      .right {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .entry {
@@ -1054,7 +1075,7 @@ body > .navbar .brand {
 
     h1  {
       font-weight: bold;
-      font-size: 48px;
+      font-size: 42px;
       margin-top: 35px;
       margin-bottom: 20px;
       margin-left: 10px;
@@ -1377,7 +1398,7 @@ body > .navbar .brand {
     display: block;
     margin: 0 1px;
     padding: 5px 10px;
-    bottom: -95px;
+    bottom: -100px;
     left: 0;
     right: 0;
     visibility: hidden;
@@ -1441,6 +1462,7 @@ body > .navbar .brand {
         font-style: italic;
       }
       &.price {
+        margin-top: 15px;
 
         .badge {
 

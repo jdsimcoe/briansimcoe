@@ -74,7 +74,7 @@
               <p>
                 <xsl:call-template name="truncate">
                   <xsl:with-param name="node" select="content" />
-                  <xsl:with-param name="length" select="450" />
+                  <xsl:with-param name="length" select="200" />
                 </xsl:call-template>
               </p>
               <p class="right">
@@ -268,7 +268,7 @@
           <em><xsl:value-of select="image/item/caption"/></em>
         </p>
       </div>
-      <img class="img-polaroid" src="/workspace/img/spacer.gif" alt="{image/item/caption}" style="width:199px; height:199px;">
+      <img class="img-polaroid" src="/workspace/img/spacer.gif" alt="{image/item/caption}" style="width:210px; height:210px;">
         <xsl:attribute name="data-responsimage">
           <xsl:value-of select="image/item/image/filename" />
         </xsl:attribute>

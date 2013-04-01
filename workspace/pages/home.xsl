@@ -31,11 +31,14 @@
       <div class="span12">
         <h3 class="section-header photo">Photography</h3>
       </div>
+    </div>
+
+    <div class="row">
       <xsl:apply-templates select="/data/photo-4-latest/entry"/>
     </div>
 
     <div class="row">
-      <div class="span12">
+      <div class="span10 offset1">
         <xsl:apply-templates select="/data/writing-latest/entry"/>
       </div>
     </div>

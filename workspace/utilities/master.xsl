@@ -62,6 +62,8 @@
     <link href="{$workspace}/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="apple-touch-icon-precomposed" href="{$workspace}/img/apple-touch-icon-precomposed.png" />
 
+    <script type="text/javascript" src="{$workspace}/js/briansimcoe.1.0.2.js"></script>
+
     <script type="text/javascript">
       <xsl:comment>
         var _gaq=[["_setAccount","UA-38166333-1"],["_trackPageview"]];
@@ -158,34 +160,6 @@
       </div>
     </footer>
 
-    <script type="text/javascript">
-    <xsl:comment>
-    (function (window) {
-      'use strict';
-      function downloadJSAtOnload() {
-        var js = {
-          "scripts":[
-            "/workspace/js/briansimcoe.1.0.2.js"
-          ]
-        };
-        for (var key in js.scripts) {
-          if (js.scripts[key]) {
-            var element=document.createElement("script");
-            element.src=js.scripts[key];
-            document.body.appendChild(element);
-          }
-        }
-      }
-      if(window.addEventListener) {
-        window.addEventListener("load",downloadJSAtOnload,false);
-      } else if (window.attachEvent) {
-        window.attachEvent("onload",downloadJSAtOnload);
-      } else {
-        window.onload=downloadJSAtOnload;
-      }
-    }(window));
-    //</xsl:comment>
-    </script>
   </body>
 
 </html>

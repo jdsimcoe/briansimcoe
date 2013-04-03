@@ -136,7 +136,7 @@
       <div class="container">
         <div class="row">
           <div class="span2">
-            <a href="{root}" class="brand">BS:<span>C</span></a>
+            <a class="brand" href="/"><strong>b</strong></a>
             <ul class="nav nav-list">
               <xsl:apply-templates select="data/navigation/page"/>
             </ul>

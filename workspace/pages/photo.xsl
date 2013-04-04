@@ -43,7 +43,7 @@
 
 </xsl:template>
 
-
+<!--
 <xsl:template match="/data/photo-all/entry">
    <div class="span3 photo">
     <a href="{$root}/photo/{title/@handle}" class="photo-entry home">
@@ -66,7 +66,7 @@
 
     </a>
   </div>
-</xsl:template>
+</xsl:template> -->
 
 
 <xsl:template match="/data/photo-single/entry">

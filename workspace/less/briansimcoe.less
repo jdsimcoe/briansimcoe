@@ -1210,6 +1210,13 @@ body > .navbar .brand {
     }
   }
 
+  &.feather {
+
+    img {
+      height: 129px;
+    }
+  }
+
 
   &:hover {
 
@@ -1285,11 +1292,6 @@ body > .navbar .brand {
   }
 
   &.featured {
-
-    .metadata {
-      left: -15px;
-      right: -15px;
-    }
 
     .featured {
       color: #fff;
@@ -1674,6 +1676,10 @@ body > .navbar .brand {
 
   }
 
+  .page-headers {
+    padding-left: 20px;
+  }
+
 }
 
 // Tablets & Below
@@ -1727,6 +1733,17 @@ body > .navbar .brand {
     }
   }
 
+  .page-headers {
+
+    h1 {
+      font-size: 36px;
+    }
+
+    .lead {
+      font-size: 20px;
+    }
+  }
+
   .wrapper-blog {
 
     &.home {
@@ -1777,6 +1794,19 @@ body > .navbar .brand {
 @media (max-width: 568px) {
 
 
+}
+
+// iPHONE 4 Landscape
+
+@media (max-width: 480px) {
+
+  .page-headers {
+    padding-left: 0;
+
+    h1 {
+      font-size: 28px;
+    }
+  }
 }
 
 // RESPONSIVE IMAGES

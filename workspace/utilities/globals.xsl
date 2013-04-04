@@ -255,6 +255,10 @@
   <xsl:call-template name="photo-entry"/>
 </xsl:template>
 
+<xsl:template match="/data/photo-all/entry">
+  <xsl:call-template name="photo-entry"/>
+</xsl:template>
+
 
 <xsl:template name="photo-entry">
 

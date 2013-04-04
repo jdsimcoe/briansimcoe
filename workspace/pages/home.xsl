@@ -19,11 +19,11 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row featured">
       <xsl:apply-templates select="/data/artwork-featured/entry"/>
     </div>
 
-    <div class="row">
+    <div class="row lower">
       <xsl:apply-templates select="/data/artwork-3-latest/entry[position() &lt; 4]"/>
     </div>
 

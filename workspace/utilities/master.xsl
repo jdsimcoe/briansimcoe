@@ -17,6 +17,8 @@
 
 <xsl:template match="/">
 
+  <xsl:variable name="version">1.0.3</xsl:variable>
+
   <html lang="en">
   <head>
     <xsl:choose>
@@ -58,11 +60,11 @@
     <meta name="author" content="Brian Simcoe" />
     <meta name="responsimage" data-server="{$root}/image/2/width/height/anchor/0/uploads/images/filename" data-static="{$workspace}/img/spacer.gif" data-loading="{$workspace}/img/loading.gif" />
 
-    <link href="{$workspace}/css/briansimcoe.1.0.2.css" rel="stylesheet" />
+    <link href="{$workspace}/css/briansimcoe.{$version}.css" rel="stylesheet" />
     <link href="{$workspace}/img/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <link rel="apple-touch-icon-precomposed" href="{$workspace}/img/apple-touch-icon-precomposed.png" />
 
-    <script type="text/javascript" src="{$workspace}/js/briansimcoe.1.0.2.js"></script>
+    <script type="text/javascript" src="{$workspace}/js/briansimcoe.{$version}.js"></script>
 
     <script type="text/javascript">
       <xsl:comment>
@@ -174,7 +176,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brand pull-left" href="/"><strong>b</strong></a>
+      <a class="brand pull-left" href="/">b</a>
       <div class="nav-collapse collapse">
         <ul class="nav pull-right">
           <xsl:apply-templates select="page"/>

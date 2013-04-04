@@ -157,7 +157,7 @@
 <xsl:template name="artwork-entry">
 
   <div class="span4 artwork">
-    <a href="{$root}/artwork/{title/@handle}" class="artwork-entry home">
+    <a href="{$root}/artwork/{title/@handle}" class="artwork-entry home small">
       <div class="metadata">
         <h4>
           <xsl:value-of select="title" />
@@ -184,7 +184,7 @@
         </p>
 
       </div>
-      <img class="img-artwork" src="/workspace/img/spacer.gif" alt="{image/item/image/caption}" style="width:100%; height:200px;">
+      <img class="img-artwork" src="/workspace/img/spacer.gif" alt="{image/item/image/caption}" width="100%">
         <xsl:attribute name="data-responsimage">
           <xsl:value-of select="image/item/image/filename" />
         </xsl:attribute>
@@ -233,7 +233,7 @@
 
         </div>
         <div class="featured">Featured</div>
-        <img class="img-artwork" src="/workspace/img/spacer.gif" alt="{image/item/image/caption}" style="width:100%; height:550px;">
+        <img class="img-artwork" src="/workspace/img/spacer.gif" alt="{image/item/image/caption}" width="100%">
           <xsl:attribute name="data-responsimage">
             <xsl:value-of select="image/item/image/filename" />
           </xsl:attribute>
@@ -268,7 +268,7 @@
           <em><xsl:value-of select="image/item/caption"/></em>
         </p>
       </div>
-      <img class="img-polaroid" src="/workspace/img/spacer.gif" alt="{image/item/caption}" style="width:210px; height:210px;">
+      <img class="img-polaroid" src="/workspace/img/spacer.gif" alt="{image/item/caption}" style="width:100%; height:240px;">
         <xsl:attribute name="data-responsimage">
           <xsl:value-of select="image/item/image/filename" />
         </xsl:attribute>

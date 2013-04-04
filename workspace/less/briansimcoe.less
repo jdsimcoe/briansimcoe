@@ -161,6 +161,17 @@
   margin-bottom: 0px;
 }
 
+.row {
+
+  &.featured {
+    margin-right: -20px;
+  }
+
+  &.lower {
+    margin-right: -21px;
+  }
+}
+
 // Glyphicon Tweaks
 
 .icon-large {
@@ -287,48 +298,20 @@ a {
 // ===============
 
 body > .navbar .brand {
+  background: darken(@color-accent, 15%);
+  color: lighten(@color-accent, 30%);
   float: left;
-  font-family: @league;
+  font-family: @league-script;
   font-size: 40px;
   font-weight: 300;
   left: 0;
-  margin-left: 5px;
+  margin-left: 0;
+  margin-right: 15px;
+  padding: 30px 25px 14px 25px;
   position: relative;
-  text-shadow: 0 1px 0 lighten(@color-accent, 10%);
-  text-transform: uppercase;
-  top: 15px;
-  visibility: hidden;
-
-  strong {
-    background: darken(@color-accent, 15%);
-    border-bottom: 5px solid darken(@color-accent, 25%);
-    color: lighten(@color-accent, 30%);
-    font-family: @league-script;
-    margin-right: 15px;
-    padding: 21px 25px 5px 25px;
-    text-transform: lowercase;
-    text-shadow: none;
-    visibility: visible;
-  }
-
-  span {
-    color: darken(@color-accent, 10%);
-  }
-
-  &:hover {
-    color: darken(@color-accent, 30%);
-    text-shadow: 0 1px 0 lighten(@color-accent, 10%);
-    visibility: visible;
-
-    strong {
-      .box-shadow(0 1px 8px rgba(255,255,255,0.25));
-      color: @color-white;
-    }
-
-    span {
-      color: darken(@color-accent, 10%);
-    }
-  }
+  top: 0;
+  text-transform: lowercase;
+  text-shadow: none;
 }
 
 .navbar {
@@ -336,30 +319,6 @@ body > .navbar .brand {
   border: none;
   border-bottom: 1px solid darken(@color-accent, 5%);
   .box-shadow(0 1px 3px rgba(0,0,0,0.25));
-
- .title {
-    font-weight: bold;
-    position: relative;
-    top: 18px;
-    font-size: 32px;
-    color: darken(@color-accent, 30%);
-    text-shadow: 0 1px 0 rgba(255,255,255,0.25);
-
-    &:hover {
-      text-decoration: none;
-      color: darken(@color-accent, 35%);
-    }
-
-    i {
-      background: darken(@color-accent, 30%);
-      .border-radius(100%);
-      font-size: 14px;
-      position: relative;
-      top: -5px;
-      padding: 7px 9px;
-      color: #fff;
-    }
-  }
 
   .nav {
 
@@ -1236,6 +1195,21 @@ body > .navbar .brand {
 .artwork-entry {
   text-align: left;
 
+  &.home {
+
+    img {
+      height: 550px;
+    }
+
+  }
+
+  &.small {
+
+    img {
+      height: 200px;
+    }
+  }
+
 
   &:hover {
 
@@ -1250,7 +1224,6 @@ body > .navbar .brand {
 
 
   .metadata {
-    visibility: hidden;
     background: -moz-linear-gradient(left, #ffffff 0%, rgba(255,255,255,0.85) 40%, rgba(255,255,255,0.85) 60%, #ffffff 100%); /* FF3.6+ */
     background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(40%,rgba(255,255,255,0.85)), color-stop(60%,rgba(255,255,255,0.85)), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(left, #ffffff 0%,rgba(255,255,255,0.85) 40%,rgba(255,255,255,0.85) 60%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
@@ -1267,6 +1240,7 @@ body > .navbar .brand {
     right: -5px;
     .border-radius(0 0 4px 4px);
     .box-shadow(0 -1px 2px rgba(0,0,0,0.1));
+    visibility: hidden;
 
     h4,
     p {
@@ -1381,9 +1355,11 @@ body > .navbar .brand {
 
 }
 
-.photo-entry {
-  text-align: left;
+.photo {
   position: relative;
+}
+
+.photo-entry {
 
   &:hover {
 
@@ -1396,11 +1372,12 @@ body > .navbar .brand {
     background: #fff;
     position: absolute;
     display: block;
-    margin: 0 1px;
+    margin: 0 0 0 10px;
     padding: 5px 10px;
-    bottom: -100px;
-    left: 0;
-    right: 0;
+    bottom: 5px;
+    left: 1px;
+    right: 1px;
+    text-align: left;
     visibility: hidden;
 
     h4 {
@@ -1513,15 +1490,16 @@ body > .navbar .brand {
   color: darken(@color-white, 30%);
 
   .brand {
-    position: relative;
-    top: -10px;
-    text-align: left;
-    margin-left: 0;
-    color: darken(@color-white, 40%);
+    background: darken(@color-white, 20%);
+    border-bottom: 4px solid lighten(@color-black, 30%);
+    color: @color-white;
     font-family: @league-script;
-    text-transform: uppercase;
-    text-shadow: 0 1px 0 #fff, 0 -1px 0 darken(@color-white, 55%);
     font-size: 40px;
+    margin-left: 0;
+    padding: 20px 25px 10px 25px;
+    position: relative;
+    text-align: left;
+    top: -40px;
 
     span {
       color: darken(@color-white, 25%);
@@ -1637,6 +1615,7 @@ body > .navbar .brand {
 .img-artwork {
   .border-radius(4px);
   .box-shadow(0 0 4px darken(@color-white, 10%));
+  padding: 0;
 }
 
 // RESPONSIVE DESIGN
@@ -1646,20 +1625,6 @@ body > .navbar .brand {
 
 @media (min-width: 980px) {
 
-  body > .navbar .brand {
-    position: relative;
-    left: 0;
-  }
-
-  .navbar {
-
-    .nav {
-
-      li {
-        font-size: 14px;
-      }
-    }
-  }
 
 }
 
@@ -1667,30 +1632,6 @@ body > .navbar .brand {
 
 @media (min-width: 1200px) {
 
-  body > .navbar .brand {
-    position: relative;
-    left: -5px;
-  }
-
-  .navbar {
-
-    .nav {
-
-      li {
-        font-size: 18px;
-      }
-    }
-  }
-
-  .jumbotron {
-
-    &.masthead {
-
-      p {
-        padding: 0 80px;
-      }
-    }
-  }
 
 }
 
@@ -1699,52 +1640,49 @@ body > .navbar .brand {
 @media (max-width: 979px) {
 
   body > .navbar .brand {
-    position: relative;
-    top: 0px;
-    font-size: 28px;
+    background: none;
+    border: none;
+    font-size: 30px;
+    left: -5px;
+    margin: 0;
+    padding: 5px 20px;
+    top: 8px;
   }
 
   .navbar {
     margin-bottom: 0;
-
-    .nav {
-      li {
-       a {
-
-       }
-      }
-    }
   }
-
-  .navbar-inverse .nav-collapse .nav > li > a,
-  .navbar-inverse .nav-collapse .dropdown-menu a,
-  .navbar-inverse .nav-collapse .nav .dropdown-menu > li > a {
-    color: #fff;
-    .box-shadow(none);
-    border: none;
-    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
-
-    &:hover {
-      background: darken(@color-accent, 20%);
-    }
-
-  }
-
 
   .jumbotron {
     margin-top: 0;
+  }
 
-    &.masthead {
+  .footer {
 
-      p {
-        padding: 0 80px;
-
-        &.vision {
-          font-size: 24px;
-        }
-      }
+    .brand {
+      display: none;
     }
 
+  }
+
+  .artwork-entry,
+  .photo-entry {
+
+    .metadata {
+      visibility: visible;
+    }
+
+  }
+
+}
+
+// Tablets & Below
+
+@media (max-width: 979px) and (min-width: 768px) {
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
   }
 
 }
@@ -1753,6 +1691,84 @@ body > .navbar .brand {
 
 @media (max-width: 767px) {
 
+  .jumbotron {
+
+    &.masthead {
+
+      h2 {
+        padding-top: 0;
+        font-size: 40px;
+      }
+
+      p.vision {
+        font-size: 20px;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .section-header {
+    font-size: 36px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    &::before,
+    &::after {
+      font-size: 12px;
+      content: "• • • • • ";
+      position: relative;
+      top: -10px;
+      color: darken(@color-white, 15%);
+      letter-spacing: 4px;
+    }
+
+    &::after {
+      content: " • • • • •";
+    }
+  }
+
+  .wrapper-blog {
+
+    &.home {
+
+      .entry {
+
+        .inner {
+          padding: 5px 20px;
+        }
+
+        h1 {
+          font-size: 28px;
+          margin-top: 10px;
+        }
+      }
+    }
+
+    .entry {
+
+      &.list {
+
+        .content {
+
+          p {
+            font-size: 14px;
+          }
+        }
+      }
+
+      h5 {
+        font-size: 16px;
+      }
+
+      h4 {
+        font-size: 16px;
+        margin-top: 0;
+      }
+
+    }
+
+  }
+
 
 }
 
@@ -1760,27 +1776,163 @@ body > .navbar .brand {
 
 @media (max-width: 568px) {
 
-  .jumbotron {
 
-    &.masthead {
+}
 
-      p {
-        padding: 0 30px;
+// RESPONSIVE IMAGES
+// =================
 
-        &.vision {
-          font-size: 18px;
-        }
+@media (max-width: 767px) {
+
+  .span12 {
+
+    .artwork {
+      margin-bottom: 15px;
+    }
+
+  }
+
+
+  .artwork-entry {
+
+    &.home,
+    &.small {
+
+      img {
+        height: 425px;
       }
+
+    }
+
+  }
+
+  .photo-entry {
+
+    &.home {
+
+      .metadata {
+        bottom: 20px;
+      }
+
+      img {
+        height: 425px !important;
+        margin-bottom: 15px;
+      }
+
     }
   }
 
-  .marketing {
 
-    .marketing-byline {
-      font-size: 16px;
-      padding: 0;
+}
+
+@media (max-width: 640px)  {
+
+  .artwork-entry {
+
+    &.home,
+    &.small {
+
+      img {
+        height: 351px;
+      }
+
     }
 
+  }
+
+  .photo-entry {
+
+    &.home {
+
+      img {
+        height: 351px !important;
+      }
+
+    }
+  }
+
+}
+
+@media (max-width: 568px) {
+
+  .artwork-entry {
+
+    &.home,
+    &.small {
+
+      img {
+        height: 309px;
+      }
+
+    }
+
+  }
+
+  .photo-entry {
+
+    &.home {
+
+      img {
+        height: 309px !important;
+      }
+
+    }
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .artwork-entry {
+
+    &.home,
+    &.small {
+
+      img {
+        height: 257px;
+      }
+
+    }
+
+  }
+
+  .photo-entry {
+
+    &.home {
+
+      img {
+        height: 257px !important;
+      }
+
+    }
+  }
+
+}
+
+@media (max-width: 320px) {
+
+  .artwork-entry {
+
+    &.home,
+    &.small {
+
+      img {
+        height: 164px;
+      }
+
+    }
+
+  }
+
+  .photo-entry {
+
+    &.home {
+
+      img {
+        height: 164px !important;
+      }
+
+    }
   }
 
 }

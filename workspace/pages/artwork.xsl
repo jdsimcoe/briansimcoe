@@ -102,9 +102,6 @@
             <xsl:value-of select="image/item/image/filename" />
           </xsl:attribute>
         </img>
-        <h4 class="caption">
-          <em><xsl:value-of select="image/item/caption"/></em>
-        </h4>
       </div>
     </div>
     <div class="row">
@@ -116,7 +113,7 @@
       </div>
       <div class="span3">
         <div class="content">
-          <h4 class="top"><xsl:value-of select="title"/></h4>
+          <h4 class="top">Details</h4>
           <p>
             <xsl:value-of select="media"/>
             <xsl:if test="medium != ''">
